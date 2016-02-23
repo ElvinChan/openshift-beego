@@ -3,7 +3,7 @@ set -eo pipefail
 
 version=${GOVERSION:-1.5.2}
 srcfile=${GOFILE:-go$version.$(uname|tr A-Z a-z)-amd64.tar.gz}
-url=${GOURL:-http://go.googlecode.com/files/$srcfile}
+url=${GOURL:-http://golangtc.com/static/go/go$version/$srcfile}
 dist=${GODIST:-$OPENSHIFT_DIY_DIR/cache/go-$version}
 
 if [ -d $dist/go ]; then
